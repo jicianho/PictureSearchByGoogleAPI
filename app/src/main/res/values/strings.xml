@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">TakePickPictureDemo</string>
+    <string name="text_btTakePictureSmall">Small Cam</string>
+    <string name="text_btTakePictureLarge">Large Cam</string>
+    <string name="text_btPickPicture">Album</string>
+    <string name="msg_NoCameraAppsFound">no camera apps found</string>
+
+</resources>

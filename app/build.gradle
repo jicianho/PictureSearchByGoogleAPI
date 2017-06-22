@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.takepickpicturedemo"
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile project(':openCVLibrary2410')
+    compile files('D:/Android Tutorial/TakePickPictureDemo3(20160114)/TakePickPictureDemo/libs/libsvm.jar')
+    compile 'com.google.api-client:google-api-client-android:1.21.0'
+    //    compile 'com.google.api-client:google-api-client:1.21.0
+    compile files('D:/Android Tutorial/TakePickPictureDemo3(20160219)/TakePickPictureDemo/libs/jsoup-1.8.3.jar')
+    compile files('D:/Android Tutorial/TakePickPictureDemo3(20160219)/TakePickPictureDemo/libs/commons-io-2.4.jar')
+    compile files('D:/Android Tutorial/TakePickPictureDemo3(20160219)/TakePickPictureDemo/libs/commons-net-3.3.jar')
+}
